@@ -33,9 +33,9 @@ exports.getAllTours = async (req, res) => {
     let query = Tour.find(queryStr);
 
     // Sorting
-    if (req.query.sort) {
-      query = query.sort();
-    }
+    // if (req.query.sort) {
+    //   query = query.sort();
+    // }
 
     const tours = await query;
 
