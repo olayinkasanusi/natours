@@ -34,10 +34,10 @@ exports.getAllTours = async (req, res) => {
 
     // Sorting
     if (req.query.sort) {
-      query = query.sort();
+      query = query.sort(req.query.sort);
     }
 
-    // const tours = await query;
+    const tours = await query;
 
     res.status(200).json({
       status: 'success',
